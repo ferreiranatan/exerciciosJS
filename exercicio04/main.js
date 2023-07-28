@@ -9,7 +9,7 @@
 function mostrarDia() {
     event.preventDefault()
 
-    
+    //Variaveis para capturar o valor
     let valor = document.getElementById('valorDeEntrada').value
     let resposta = document.getElementById('resposta')
 
