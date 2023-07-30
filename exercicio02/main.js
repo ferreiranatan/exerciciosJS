@@ -7,6 +7,7 @@
     const valorDois = document.getElementById('dois').value
     const botao = document.getElementById('submit')
     const resposta = document.getElementById('mostrar_valor')
+    
     function comparandoValores() {
 
     if (valorUm > valorDois) {
