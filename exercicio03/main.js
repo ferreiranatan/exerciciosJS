@@ -1,19 +1,34 @@
 // // Escreva uma função que lê o ano de nascimento de uma pessoa. 
 // Mostre uma mensagem que diga se ela poderá ou não votar este ano (não é necessário considerar o mês em que a pessoa nasceu).
+const botao = document.getElementById('submit')
+const resposta = document.getElementById('resposta')
 
-function votaOuNao(n){
-    let anoAtual = new Date().getFullYear()
-    let idade = anoAtual - n
+function votaOuNao() {
     
-    if(typeof Number != n || n > anoAtual){
-        return 'Insira um valor válido'
+    event.preventDefault()
+    const valor = parseInt(document.getElementById('dia').value)
+    
+    let anoAtual = new Date().getFullYear()
+    let idade = anoAtual - valor
+    
+    
+    if (isNaN(valor) || valor > anoAtual && valor > 0) {
+        resposta.innerHTML = 'Insira um valor válido'
     }
-
-    if (idade >= 16){
-        return `Você tem ${idade} anos de idade e nesse ano de ${anoAtual} e você podera votar!`
-    }else if(idade < 16 ){
-        return `Você tem ${idade} anos de idade e você ainda não pode votar!!`
+    
+    if (idade >= 16) {
+        resposta.innerHTML = `Você tem ${idade} anos de idade e nesse ano de ${anoAtual} e você podera votar!`
+    } else if (idade < 16) {
+        resposta.innerHTML = `Você tem ${idade} anos de idade e você ainda não pode votar!!`
     }
+    
+    
 }
 
-console.log(votaOuNao());//Passe o ano de nascimento como parametro
+
+
+function enviarValor() {
+    botao.addEventListener('click', votaOuNao)
+}
+
+enviarValor()

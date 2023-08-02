@@ -1,7 +1,5 @@
 // 2 Escreva uma função que lê dois nº inteiros diferentes e mostre uma mensagem indicando qual é o maior.
-// if(typeof numeroUm && typeof numeroDois != Number){
-//      'insira um valor válido'
-// }
+// 
 
     const valorUm = document.getElementById('um').value
     const valorDois = document.getElementById('dois').value
@@ -22,6 +20,4 @@
 
 function mostrarValor()
 
-botao.addEventListener(click,()=>{
-resposta.innerHTML = comparandoValores()
-})
+botao.addEventListener(click, comparandoValores)

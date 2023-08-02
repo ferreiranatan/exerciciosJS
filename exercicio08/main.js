@@ -1,7 +1,7 @@
 const botao = document.getElementById('submit')
 
 
-function mostrarImpar() {
+const mostrarImpar = () => {
     const valorSaida = document.getElementById('resposta')
     const valores = parseInt(document.getElementById('valor').value)
     let resultado = []
@@ -15,23 +15,17 @@ function mostrarImpar() {
         }
     }
 
-    limparCampos()
+  
 
 }
 
-function enviarResult() {
+const enviarResult = () => {
     botao.addEventListener('click', mostrarImpar)
 
 
 }
 
-function limparCampos() {
-    document.getElementById('valor').value = ''
 
-
-
-
-}
 
 enviarResult()
 mostrarImpar()

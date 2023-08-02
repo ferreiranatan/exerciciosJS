@@ -11,7 +11,7 @@ const contador = () => {
         for (let n = 0; n <= valorDeEntrada; n++) {
             setTimeout(() => {
                 resposta.innerHTML = n;
-            }, n * 450)
+            }, n * 1000)
         }
     } else {
         resposta.innerHTML = "insira um valor válido"
